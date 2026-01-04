@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reportLost.css">
+    <title>report Lost</title>
+
+</head>
+
+<body>
+    <nav>
+        <img src="https://media.istockphoto.com/id/1739381148/vector/lost-items-icon-lost-and-found.jpg?s=612x612&w=0&k=20&c=cfMKPPNCCI-R95iEBcALlkCbgBVPj5smE7RG1aRRAcU="
+            alt="">
+        <div class="men">
+            <img class="th" src="./images/main-menu.png" alt="no">
+            <img class="cl" src="./images/close.png" alt="no">
+        </div>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/lost">Lost</a>
+            <a href="/reportLost">Report Lost</a>
+            <a href="/found">Found</a>
+            <a href="/reportfound">Report Found</a>
+            <a href="/profile">Profile</a>
+            <a href="/signOut"><button>sign out</button></a>
+        </div>
+    </nav>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="main">
+            <h1>Report found Item</h1>
+            <div class="container">
+                <div class="name">
+                    <label for="name">
+                        <h1>Name: </h1>
+                    </label>
+                    <input type="text" name="name" placeholder="name">
+                </div>
+                <div class="item">
+                    <label for="">
+                        <h1>Item: </h1>
+                    </label>
+                    <input type="text" placeholder="item name" name="item">
+                </div>
+                <div class="location">
+                    <label for="">
+                        <h1>Location: </h1>
+                    </label>
+                    <input type="text" placeholder="Location" name="location">
+                </div>
+                <div class="date">
+                    <label for="">
+                        <h1>date: </h1>
+                    </label>
+                    <input type="date" name="date" placeholder="date">
+                </div>
+                <div class="itemdes">
+                    <label for="">
+                        <h1>Item Description: </h1>
+                    </label>
+                    <textarea name="des" id="" cols="28" rows="4" fixed></textarea>
+                </div>
+                <div class="uploadphoto">
+                    <label for="">
+                        <h1>Upload Photo: </h1>
+                    </label>
+
+                    <input type="file" name="image" accept="image/*">
+                </div>
+                <div class="buttons">
+                    <button class="submit">Submit</button>
+                    <button class="cancle">Cancle</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./scripts/index.js"></script>
+
+</html>

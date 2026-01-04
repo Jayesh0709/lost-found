@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/indexStyle.css">
+    <title>lost and found - home page</title>
+</head>
+<body>
+     <nav>
+        <img src="https://media.istockphoto.com/id/1739381148/vector/lost-items-icon-lost-and-found.jpg?s=612x612&w=0&k=20&c=cfMKPPNCCI-R95iEBcALlkCbgBVPj5smE7RG1aRRAcU="
+            alt="">
+        <div class="men">
+            <img class="th" src="./images/main-menu.png" alt="no">
+            <img class="cl" src="./images/close.png" alt="no">
+        </div>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/lost">Lost</a>
+            <a href="/reportLost">Report Lost</a>
+            <a href="/found">Found</a>
+            <a href="/reportfound">Report Found</a>
+            <a href="/profile">Profile</a>
+            <a href="/signOut"><button>sign out</button></a>
+        </div>
+    </nav>
+
+    <div class="home">
+        <div class="homel">
+            <h1>Find &</h1>
+            <h1>Recover</h1>
+            <h1>With Ease</h1>
+        </div>
+        <div class="homer">
+            <div class="lf">
+                <div class="lost">
+                    <h1>Lost</h1>
+                    <img src="./images/lost icon.png" alt="">
+                </div>
+                <div class="found">
+                    <h1>Found</h1>
+                    <img src="./images/search Icon.svg" alt="">
+                </div>
+
+                <div class="images">
+                    <img class="img1" src="./images/pexels-pixabay-159868.jpg" alt="no">
+                    <img class="img2" src="./images/pexels-pixabay-220147.jpg" alt="no">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer>
+        <div class="flogo">
+            <img src="https://media.istockphoto.com/id/1739381148/vector/lost-items-icon-lost-and-found.jpg?s=612x612&w=0&k=20&c=cfMKPPNCCI-R95iEBcALlkCbgBVPj5smE7RG1aRRAcU="
+                alt="">
+        </div>
+        <div class="cpwrite">
+            <p>Copyright 2024 Lost and Found </p>
+            <p>All Right Reserved</p>
+        </div>
+        <div class="cont">
+            <h3>Contact</h3>
+            <p>Tel: +91 9029394345</p>
+        </div>
+    </footer>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./scripts/index.js"></script>
+     <!-- <script>
+        document.querySelector(".lost").addEventListener("click",()=>{
+            alert("clicked")
+        })
+     </script> -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/items">items</a>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="name">name: </label>
+        <input type="text" name="name" required><br>
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">submit</button>
+    </form>
+
+    <button class="logout">logout</button>
+
+
+    <script>
+        let logout = document.querySelector(".logout");
+        logout.addEventListener('click', () => {
+            alert("logout")
+            fetch('/logout')
+            .then(res=> window.location.href = "/login");
+        })
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("mess") == "done") {
+            alert("added in D.B")
+        }
+    </script>
+
+</body>
+
+</html> -->

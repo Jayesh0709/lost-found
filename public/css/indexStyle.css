@@ -1,0 +1,381 @@
+ html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        nav {
+            height: 50px;
+            width: calc(100%-0.1px);
+            background-color: rgb(253, 166, 52);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav img {
+            height: 50px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .links {
+            display: flex;
+            gap: 24px;
+            text-align: center;
+            place-items: center;
+        }
+
+        .links button {
+            margin-right: 8px;
+        }
+
+        .men {
+            cursor: pointer;
+            display: none;
+        }
+
+        /*      nav  Bar  over  */
+
+
+
+        /*    home - start */
+
+        .home {
+            height: calc(91vh - 50px);
+            width: 100%;
+            background: linear-gradient(to left, rgba(235, 245, 54, 0.402), rgba(251, 172, 222, 0.402));
+            align-items: center;
+            place-content: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        .homel h1 {
+            line-height: 34px;
+        }
+
+        .homel {
+            height: 340px;
+            width: 40%;
+            margin-top: 0px;
+            font-size: xxx-large;
+            font-family: sans-serif;
+            font-weight: 400;
+            text-align: center;
+            /* border: 1px solid black;/ */
+        }
+
+        .homer {
+            height: 340px;
+            width: 40%;
+            /* border: 1px solid black; */
+        }
+
+        .lf {
+            margin: 20px;
+            display: grid;
+            gap: 22px;
+            justify-items: center;
+        }
+
+        .lost {
+            cursor: pointer;
+            color: white;
+            border-radius: 7px;
+            height: 60px;
+            width: 200px;
+            background: linear-gradient(to right, rgba(212, 16, 16, 0.806), rgba(232, 75, 75, 0.753));
+            box-shadow: 2px 9px 20px -10px black;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .lost h1 {
+            margin: 10px;
+
+        }
+
+        .lost img {
+            margin-top: 5px;
+            height: 25px;
+        }
+
+        .found {
+            cursor: pointer;
+            border-radius: 7px;
+            background: linear-gradient(to right, rgba(156, 229, 66, 0.731), rgba(109, 194, 5, 0.959));
+            height: 60px;
+            width: 200px;
+            box-shadow: 2px 9px 20px -10px black;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+
+        .found h1 {
+            color: white;
+            margin: 10px;
+
+        }
+
+        .found img {
+            margin-top: 5px;
+            height: 27px;
+        }
+
+        .images {
+            display: flex;
+        }
+
+        .images img {
+            height: 100px;
+            border-radius: 8px;
+        }
+
+        .img1 {
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        .img2 {
+            position: relative;
+            top: 50px;
+            right: 40px;
+        }
+
+        /* ---------------    footer   ------------ */
+        footer {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 0px;
+            height: 60px;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+
+            position: sticky;
+        }
+
+        .flogo {
+            height: auto;
+            width: 15vw;
+            padding-left: 2px;
+        }
+
+        .flogo img {
+            height: 55px;
+        }
+
+        .cpwrite {
+
+            height: auto;
+            width: 50vw;
+            color: black;
+            justify-items: center;
+            align-items: center;
+        }
+
+        p {
+            line-height: 8px;
+        }
+
+        .cont {
+            line-height: 3px;
+            font-size: xx-small;
+            color: black;
+        }
+
+
+        /* ------------      MEDIA QUERIES    -----------*/
+
+        @media (max-width:750px) {
+            .images img {
+                height: 80px;
+                border-radius: 8px;
+            }
+
+        }
+
+
+        @media (max-width:762px) {
+            .homel {
+                font-size: x-large;
+            }
+        }
+
+        @media (min-width:300px) and (max-width:449px) {
+
+            .images img {
+                height: 100px;
+            }
+
+            .cpwrite {
+                position: relative;
+                bottom: -5px;
+            }
+
+            .cpwrite p {
+                line-height: 4px;
+                font-size: small;
+            }
+        }
+
+        @media (max-width:450px) {
+            .home {
+                height: calc(84vh - 50px);
+                padding-top: 30px;
+                margin: 0px;
+                display: inline-block;
+                align-content: baseline;
+                justify-items: center;
+            }
+
+            .homel {
+                margin-left: 10px;
+                height: 150px;
+                width: 250px;
+                justify-items: baseline;
+
+            }
+
+
+            .homer {
+                height: 200px;
+                justify-items: center;
+            }
+
+            .homel h1 {
+                font-size: xxx-large;
+                line-height: 10px;
+                font-weight: 700;
+            }
+        }
+
+
+        @media (min-width:450px) and (max-width:572px) {
+            .homel {
+                font-size: large;
+            }
+
+            .images img {
+                height: 75px;
+            }
+
+        }
+
+        @media (max-width:573px) {
+            /* .homel {
+                font-size: large;
+            } */
+
+            .images img {
+                /* height: 75px; */
+                border-radius: 8px;
+                margin-top: 30px;
+            }
+
+            .lost {
+                font-size: small;
+                border-radius: 7px;
+                height: 42px;
+                width: 140px;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .found {
+                font-size: small;
+                border-radius: 7px;
+                height: 42px;
+                width: 140px;
+
+            }
+
+        }
+
+
+        @media (max-width:1600px) and (min-width:762px) {
+            .homel {
+                font-size: 4vw;
+            }
+
+            .images img {
+                height: 120px;
+            }
+        }
+
+
+
+        /*   media -  500 px */
+
+        @media (max-width:500px) {
+
+            /* nav bar  media - s */
+            .links {
+
+                padding: 20px;
+                border-radius: 5px;
+                gap: 18px;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                /* left: 0; */
+                right: 15px;
+                background: rgba(71, 65, 65, 0.587);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                backdrop-filter: blur(5px);
+                transform: translateY(-20px);
+            }
+
+            .links a {
+                color: white;
+            }
+
+            .th {
+                position: absolute;
+                visibility: visible;
+            }
+
+            .cl {
+                visibility: hidden;
+            }
+
+
+
+            .links.active {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+
+            .men {
+                /* position: relative; */
+                display: block;
+            }
+
+            .men img {
+                margin-top: 5px;
+                margin-right: 20px;
+                display: block;
+                height: 35px;
+
+            }
+
+
+            /*  nav bar media - end */
+        }

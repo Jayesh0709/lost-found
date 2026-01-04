@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/lost.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <nav>
+        <img src="https://media.istockphoto.com/id/1739381148/vector/lost-items-icon-lost-and-found.jpg?s=612x612&w=0&k=20&c=cfMKPPNCCI-R95iEBcALlkCbgBVPj5smE7RG1aRRAcU="
+            alt="">
+        <div class="men">
+            <img class="th" src="./images/main-menu.png" alt="no">
+            <img class="cl" src="./images/close.png" alt="no">
+        </div>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/lost">Lost</a>
+            <a href="/reportLost">Report Lost</a>
+            <a href="/found">Found</a>
+            <a href="/reportfound">Report Found</a>
+           <a href="/profile">Profile</a>
+            <a href="/signOut"><button>sign out</button></a>
+        </div>
+    </nav>
+
+    <!-- -------  main  ----- -->
+
+    <div class="main">
+        <h1>Lost Item</h1>
+        <div class="search">
+            <input type="text" id="searchtxt" placeholder="Item Name">
+
+        </div>
+        <div class="items">
+            <% data.forEach(el=> { %>
+                <div class="item">
+                    <div class="itemname">
+                        <h1>
+                            <%= el.name %>
+                        </h1>
+                        <h4><%= el.date %></h4>
+                    </div>
+                    <div class="image">
+                        <img src="<%= el.photoUrl %>" alt="">
+                    </div>
+                    <div class="itemdes">
+                        <h4><%= el.item %></h4>
+                        <p><%= el.location %></p>
+                    </div>
+                    <div class="des">
+                        <p> <%= el.des %> </p>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./scripts/index.js"></script>
+
+</html>

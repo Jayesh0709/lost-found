@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        nav {
+            background-color: blueviolet;
+            height: 50px;
+            margin: 0;
+
+        }
+
+        nav img {
+            height: 50px;
+        }
+
+        .main {
+            height: calc(100vh - 50px);
+            background-color: bisque;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 0px;
+            display: flex;
+
+        }
+
+
+        input {
+            padding-left: 15px;
+            /* margin-top: 20px; */
+            margin-bottom: 13px;
+            height: 27px;
+            width: 230px;
+            border: 0px solid black;
+            border-radius: 6px;
+            box-shadow: inset 0px 2px 6px grey;
+        }
+
+        input:focus {
+            outline: none;
+
+        }
+
+        img {
+            height: 30vw;
+        }
+
+        .box {
+            height: 72vh;
+            width: 40vw;
+            border-radius: 10px;
+            border: 1px solid black;
+            align-items: center;
+            justify-items: center;
+            box-shadow: 0px 0px 10px 0px grey;
+        }
+
+        .detail {
+            margin-top: 10px;
+        }
+
+        button {
+            cursor: pointer;
+            border: 1px solid black;
+            border-radius: 6px;
+            height: 30px;
+            width: 100px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            gap: 30px;
+            display: flex;
+        }
+
+        .sub {
+            color: white;
+            background-color: rgba(60, 58, 58, 0.769);
+        }
+
+        select {
+            padding-left: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            height: 31px;
+            width: 240px;
+            border: 0px solid black;
+            border-radius: 6px;
+            box-shadow: inset 0px 2px 6px grey;
+        }
+
+        select:focus {
+            outline: none;
+        }
+
+
+
+
+        @media (min-width:900px) {
+            img {
+                height: 350px;
+            }
+
+            .box {
+                height: 75vh;
+                width: 430px;
+                border-radius: 10px;
+                border: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+            }
+        }
+
+        @media (max-width:750px) {
+            .main {
+                flex-direction: column;
+            }
+
+            img {
+                height: 170px;
+            }
+
+            .box {
+                height: 60vh;
+                width: 80vw;
+                border-radius: 10px;
+                border: 1px solid black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="https://media.istockphoto.com/id/1739381148/vector/lost-items-icon-lost-and-found.jpg?s=612x612&w=0&k=20&c=cfMKPPNCCI-R95iEBcALlkCbgBVPj5smE7RG1aRRAcU="
+            alt="">
+    </nav>
+    <div class="main">
+        <form action="/register/user" method="post">
+            <div class="box">
+                <h1>Register</h1>
+                <div class="detail">
+                    <label for="">User Name</label>
+                    <br>
+                    <input required class="name" name="name" type="text">
+                    <br>
+                    <label for="" >Phone Number</label>
+                    <br>
+                    <input required class="name" pattern="\d{10}" maxlength="10" name="number" type="number"><br>
+                    <label for="">Gender</label>
+                    <br>
+                    <select name="gender" id="" required>
+                        <option value="">-- Select Gender --</option>
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                        <option value="others">others</option>
+                    </select>
+                    <br>
+                    <label for="">Mail Id</label>
+                    <br>
+                    <input required class="name" name="mail" type="text">
+                    <br>
+                    <label for="">Password</label>
+                    <br>
+                    <input required class="name" name="password" type="password">
+                    <br>
+                </div>
+                <div class="btn">
+                    <button class="sub" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>
