@@ -1,4 +1,6 @@
- html,
+ /*    nav Bar    */
+
+        html,
         body {
             height: 100%;
             width: 100%;
@@ -36,6 +38,7 @@
         }
 
         .men {
+
             cursor: pointer;
             display: none;
         }
@@ -85,7 +88,6 @@
         }
 
         .lost {
-            cursor: pointer;
             color: white;
             border-radius: 7px;
             height: 60px;
@@ -109,7 +111,6 @@
         }
 
         .found {
-            cursor: pointer;
             border-radius: 7px;
             background: linear-gradient(to right, rgba(156, 229, 66, 0.731), rgba(109, 194, 5, 0.959));
             height: 60px;
@@ -161,7 +162,7 @@
             bottom: 0px;
             height: 60px;
             width: 100%;
-            background:linear-gradient(to left, rgba(235, 245, 54, 0.402), rgba(251, 172, 222, 0.402));
+            background-color: white;
             display: flex;
             justify-content: space-around;
 
