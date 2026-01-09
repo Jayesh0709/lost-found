@@ -10,7 +10,7 @@
  nav {
      height: 50px;
      width: calc(100%-0.1px);
-    background: linear-gradient(to left, rgba(235, 245, 54, 0.402), rgba(251, 172, 222, 0.402));
+     background: linear-gradient(to left, rgba(235, 245, 54, 0.402), rgba(251, 172, 222, 0.402));
      display: flex;
      justify-content: space-between;
  }
@@ -48,6 +48,10 @@
      width: 100%;
      background: linear-gradient(to left, rgba(235, 245, 54, 0.402), rgba(251, 172, 222, 0.402));
      justify-items: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
  }
 
  .main h1 {
