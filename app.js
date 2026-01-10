@@ -1,8 +1,9 @@
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const fs = require('fs');
-const user = require("./appBack");
-const userin = require("./userback");
+const mongoose = require('mongoose');
+const user = require("./appBack");   //  for data
+const userin = require("./userback"); // for user info
 const app = express();
 const port = 3000;
 const session = require('express-session');
@@ -34,7 +35,7 @@ app.use(session({
 
 //   authentication  
 const logger = (req, res, next) => {
-    const openRoutes = ['/login','/register', '/loginuser', '/register/user'];
+    const openRoutes = ['/login', '/register', '/loginuser', '/register/user'];
     if (openRoutes.includes(req.path)) return next();
     if (req.session.user) return next();
     res.redirect('/login');
@@ -62,7 +63,7 @@ app.post('/loginuser', async (req, res) => {
         req.session.user = userr;
         username = userr.name;
         console.log(username);
-        
+
         res.redirect("/");
     }
     else {
@@ -112,9 +113,33 @@ app.get('/reportfound', (req, res) => {
 // abhi 
 app.get('/profile', async (req, res) => {
     const data = await userin.find({ name: username }).toArray();
-    let udata = await user.find({umail:req.session.user.mail}).toArray();
-    res.render('profile', { data, umail, udata});
+    let udata = await user.find({ umail: req.session.user.mail }).toArray();
+    res.render('profile', { data, umail, udata });
 })
+
+
+
+app.delete('/posts/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        console.log(id);
+        const deleteResult = await user.deleteOne({
+            _id: new mongoose.Types.ObjectId(id)
+        });
+        console.log(deleteResult)
+        if (!deleteResult || deleteResult.deletedCount === 0) {
+            return res.status(404).json({ message: "post not found" });
+        }
+        res.status(200).json({ message: "post deleted successfully" });
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "invalid ID or server error" })
+    }
+});
+
+
+
 app.get('/signOut', (req, res) => {
     req.session.destroy(() => {
         res.redirect('/login');

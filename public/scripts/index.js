@@ -7,22 +7,24 @@ let found = document.querySelector(".found");
 let isOpen = false;
 
 
-// let search = document.querySelector("#searchtxt");
-// let items = document.querySelectorAll(".item");
+let search = document.querySelector("#searchtxt");
+let items = document.querySelectorAll(".item");
 
-// search.addEventListener("keyup", () => {
-//     let value = search.value.toLowerCase();
-//     items.forEach(item => {
-//          let name = item.querySelector(".itemname").textContent.toLowerCase();
-//          let desc = item.querySelector(".itemdes").textContent.toLowerCase();
+// document.addEventListener("DOMContentLoader", () => {
+search.addEventListener("keyup", () => {
+    let value = search.value.toLowerCase();
+    items.forEach(item => {
+        let name = item.querySelector(".itemname").textContent.toLowerCase();
+        let desc = item.querySelector(".itemdes").textContent.toLowerCase();
 
-//          if(name.includes(value) || desc.includes(value)){
-//             item.style.display = "block";
-//         }
-//         else{
-//              item.style.display = "none";
-//          }
-//     })
+        if (name.includes(value) || desc.includes(value)) {
+            item.style.display = "block";
+        }
+        else {
+            item.style.display = "none";
+        }
+    })
+})
 // })
 
 
@@ -34,11 +36,11 @@ menu.addEventListener("click", () => {
         t1.to(th, {
             rotate: 360,
             // opacity: 0
-            display:"none"
+            display: "none"
         })
         t1.to(clos, {
             rotate: 360,
-            display:"block"
+            display: "block"
         })
         // th.style.visibility = "hidden"
         links.classList.add("active");
@@ -52,11 +54,11 @@ menu.addEventListener("click", () => {
         let t1 = gsap.timeline();
         t1.to(clos, {
             rotate: 360,
-           display:"none"
+            display: "none"
         })
         t1.to(th, {
             rotate: 360,
-            display:"block"
+            display: "block"
         })
         // 
         gsap.to(links, {
@@ -101,3 +103,23 @@ found.addEventListener("mouseleave", () => {
         scale: 1
     })
 })
+
+
+function del(id) {
+    console.log(id)
+    fetch(`/posts/${id}`, {
+        method: "DELETE"
+    })
+        .then(async (res) => {
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || data.message);
+            }
+
+            console.log(data);
+            // location.reload();
+        })
+        .then(()=>{location.reload()})
+        .catch(err => console.error("FRONTEND ERROR 👉", err.message));
+}
