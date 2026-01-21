@@ -8,5 +8,5 @@ const userSchema = mongoose.Schema({
     password:String
 })
 // module.exports = db.collection('users',userSchema);
-
+    
 module.exports = db.collection('userinfo');
